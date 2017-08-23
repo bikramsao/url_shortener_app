@@ -18,6 +18,7 @@ class UrlsController < ApplicationController
   end
 
   def index
+  	@urls = Url.all
   	
   end
 
@@ -28,7 +29,6 @@ class UrlsController < ApplicationController
   protected
 
 		def url_params
-			params.require(:url).permit(:address_type, :name, :address_1, :address_2, :city,
-																			:state, :pincode, :landmark)
+			params.require(:url).permit(:original_url)
 		end
 end

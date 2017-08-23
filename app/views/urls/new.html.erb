@@ -1,13 +1,18 @@
+<h3>Enter URL to shorten it .</h3>
 <%= form_for @url,url: urls_path,html: {method: 'post'}  do |f| %>
-	<div class="form_format">
-
-		<div class="form-group">
-			<%= f.label :original_url %>
-			<%= f.text_field :original_url, class: "form-control"%>
-		</div>
-		
-		<div class="form-group">			
-			<%= f.submit 'Submit', class: "btn btn-primary" %>
-		</div>	
+	<div class="container">
+	  <div class="panel panel-default">
+	  <div class="panel-body">
+			<div class="form-group col-md-8 col-md-offset-2">
+				<%= f.label :original_url ,"Enter URL:"%>
+				<%= f.text_field :original_url, class: "form-control"%>
+			</div>
+			
+			<div class='col-md-4 col-md-offset-5'>			
+				<%= f.submit 'Submit', class: "btn btn-primary" %>
+			</div>
+			</div>
+		</div>		
 	</div>	
 <% end %>
+><%= link_to 'Show Top 100 Visited Sites',urls_path ,class: 'btn btn-info'%>
