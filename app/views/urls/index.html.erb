@@ -1,16 +1,17 @@
 <h3>Top 100 Visited Sites</h3>
-
-<table class="table table-hover">
-  <tr>
-    <th>Original URL</th>
-    <th>Shortened URL</th>
-    <th>Visit Count</th>
-  </tr>
- 
-  <% @urls.each do |row| %>
-    <tr>
-      <td><%= row.original_url %></td>
-      <td>shortenedurlgen.herokuapp.com/<%= row.shortened_url %></td>
-      <td><%= row.visit_count %></td>
-  <% end %>
-</table>
+<div class="container">
+	<table class="table table-hover">
+	  <tr>
+	    <th>Original URL</th>
+	    <th>Shortened URL</th>
+	    <th>Visit Count</th>
+	  </tr>
+	 
+	  <% @urls.each do |row| %>
+	    <tr>
+	      <td><%= row.original_url %></td>
+	      <td>shortenedurlgen.herokuapp.com/<%= row.shortened_url %></td>
+	      <td><%= row.visit_count %></td>
+	  <% end %>
+	</table>
+</div>
