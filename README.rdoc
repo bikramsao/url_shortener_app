@@ -1,8 +1,7 @@
                                                  README
                          ----------------------------------------------------------------
-Heroku link:https://shortenedurlgen.herokuapp.com
 
-This application will help to shorten URLs and keep track of number of visits of that page
+This application will help to shorten URLs and keep track of number of visits of that page.
 
 
 Just enter the url and the application will generate shorten URL for you.                                                 
@@ -11,3 +10,23 @@ Just enter the url and the application will generate shorten URL for you.
 * Ruby version : 2.2.4
 
 * Rails version : 4.2.6
+
+Install Dependencies
+
+To install dependencies run below command:
+	$ bundle install
+
+Create database and run migrations
+
+	To create database:
+		$ rails db:create
+	To run the migrations:
+		$ rails db:migrate
+
+To start the application
+
+	In development mode
+		$ rails s
+
+Live Version
+	https://shortenedurlgen.herokuapp.com
