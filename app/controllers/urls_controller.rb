@@ -35,7 +35,7 @@ class UrlsController < ApplicationController
     if params[:shortened_url]
       @url = Url.find_by(shortened_url: params[:shortened_url])
       safeurl = URI.encode(@url.original_url)
-      if @url.start_with?("http://", "https://")
+      if @url.original_url.start_with?("http://", "https://")
         redirect_to safeurl
         @url.visit_count += 1
         @url.save
